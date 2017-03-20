@@ -59,7 +59,7 @@ module.exports = function(msg) {
     });
 
     http.createServer(app).listen(process.env.PORT, function() {
-        console.log("Express server listening on port 1337");
+        // console.log("Express server listening on port 1337");
     });
 
 
