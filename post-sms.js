@@ -50,7 +50,7 @@ module.exports = function(msg) {
             console.log("invalid syntax");
             //Function error
 
-            // sendSms('invalid Syntax', from);
+            sendSms('invalid Syntax', from);
         }
 
         // twiml.message(msg);
