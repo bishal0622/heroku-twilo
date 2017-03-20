@@ -58,7 +58,7 @@ module.exports = function(msg) {
         res.end(twiml.toString());
     });
 
-    http.createServer(app).listen(1337, function() {
+    http.createServer(app).listen(process.env.PORT, function() {
         console.log("Express server listening on port 1337");
     });
 
