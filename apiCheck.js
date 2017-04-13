@@ -7,10 +7,10 @@ module.exports = function(from, body) {
     var client = new Client();
 
     //split
-    var s = from.substr(1);
-    
+    var s = from.substring(1);
+
     client.get("http://business.capaz.org/sms_balanceEnquiry?&mobile=%2B" + s + "&token=" + token, function(data, response) {
-        console.log(data);
+        console.log(JSOn.parse(data));
 
         if (data.error == 404) {
             sendSms("The number is not registered. Please contact your Bank.", from);
