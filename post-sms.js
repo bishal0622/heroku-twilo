@@ -3,16 +3,15 @@ module.exports = function(msg) {
     var express = require('express');
     var twilio = require('twilio');
     var bodyParser = require('body-parser');
-
+    var splitBody = require('./splitBody');
     var sendSms = require('./send-sms');
     var checkSyntax = require('./checkSyntax');
-    var splitBody = require('./splitBody');
     var apiCheck = require('./apiCheck');
 
     var app = express();
 
     // var flag = false;
-
+    //use of express
     app.use(bodyParser.urlencoded({ extended: false }));
 
     //post sms to server
