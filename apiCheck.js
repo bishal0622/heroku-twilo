@@ -7,8 +7,8 @@ module.exports = function(from, body) {
     var client = new Client();
 
     //split
-    var s = from.substring(1);
-
+    var s = from.substr(1);
+    
     client.get("http://business.capaz.org/sms_balanceEnquiry?&mobile=%2B" + s + "&token=" + token, function(data, response) {
         console.log(data);
 
