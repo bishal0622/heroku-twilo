@@ -11,6 +11,7 @@ module.exports = function(from, body) {
 
     client.get("http://business.capaz.org/sms_balanceEnquiry?&mobile=%2B" + s + "&token=" + token, function(data, response) {
         console.log(JSON.parse(data));
+        data = JSON.parse(data);
 
         if (data.error == 404) {
             console.log("error message");
