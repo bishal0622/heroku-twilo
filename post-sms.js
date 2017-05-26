@@ -40,7 +40,8 @@ module.exports = function(msg) {
         } else if (index == 1) {
             //index 1 to balance transfer after checkSyntax
             console.log('Transfer');
-            console.log("Transfered Number : " + splitting[1]);
+            console.log("Amount : " + splitting[1]);
+            console.log("Username " + splitting[2]);
             //Function balance transfer
             // flag = apiCheck(app, from, req.body.Body);
             // sendSms('balance transfered', from);
