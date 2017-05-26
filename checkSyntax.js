@@ -1,7 +1,7 @@
 module.exports = function(syntaxTest) {
     var anymatch = require('anymatch');
     //pattterns matching using regular expressions
-    var matchers = [/\b(BI|bi|Bi)$/, /\b(BT|bt)$/];
+    var matchers = [/\b(BI|bi|Bi)$/, /\b(BT|bt|Bt|bT)$/];
     return anymatch(matchers, syntaxTest, true);
 }
 
