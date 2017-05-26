@@ -15,7 +15,7 @@ module.exports = function(from, amount, username) {
 
         if (data.error == 404) {
             console.log("error message");
-            sendSms("The number is not registered. Please contact your Bank.", from);
+            sendSms("The username is not registered. Please contact your Bank.", from);
             fs.appendFile('errorlog.txt', JSON.stringify(data) + " Date-->" + Date() + "from" + from + " \r\n", function(err) {
                 if (err) throw error;
             });

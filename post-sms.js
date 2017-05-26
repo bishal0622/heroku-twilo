@@ -2,6 +2,7 @@ module.exports = function(msg) {
     var http = require('http');
     var express = require('express');
     var twilio = require('twilio');
+    var transferApi = require('./transferCheck');
     var bodyParser = require('body-parser');
     var splitBody = require('./splitBody');
     var sendSms = require('./send-sms');
@@ -43,6 +44,7 @@ module.exports = function(msg) {
             console.log("Amount : " + splitting[1]);
             console.log("Username " + splitting[2]);
             //Function balance transfer
+            transferApi(from,splitting[1],splitting[2]);
             // flag = apiCheck(app, from, req.body.Body);
             // sendSms('balance transfered', from);
 
