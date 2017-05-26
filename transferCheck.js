@@ -21,9 +21,7 @@ module.exports = function(from, amount, username) {
             });
         } else if (data.success) {
             console.log("success");
-            console.log("yaha ako data")
-            console.log(data.success.msg);
-            // sendSms(data.success.msg , from);
+            sendSms("mobile: " + data.success.msg , from);
             fs.appendFile('successlog.txt', JSON.stringify(data) + " -->" + Date() + " \r\n", function(err) {
                 if (err) throw error;
             });
