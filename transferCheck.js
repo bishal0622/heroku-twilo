@@ -21,7 +21,10 @@ module.exports = function(from, amount, username) {
             });
         } else if (data.success) {
             console.log("success");
-            sendSms("mobile: " + data.success.msg , from);
+            sendSms(data.success.senderMessage , from);
+            if(data.success.receiverMobile != null){
+                sendSms(data.success.receiverMessage,data.success.receiverMobile)
+            }
             fs.appendFile('successlog.txt', JSON.stringify(data) + " -->" + Date() + " \r\n", function(err) {
                 if (err) throw error;
             });
